@@ -1,0 +1,46 @@
+<h3 *ngIf="!customGames" >All Games</h3>
+
+<!-- <button (click)="displayInGrid = !displayInGrid">Switch display </button>
+
+
+  <div *ngIf="displayInGrid" class="col-1-4 inGrid" >
+
+      <my-game *ngFor="let game of games"
+        (click)="gotoDetail(game)"
+        [withoutimage]=false
+        [name]=game.name
+        [image]=game.image
+        [price]=game.price  >
+      </my-game>
+  </div>
+
+
+<div *ngIf="!displayInGrid" class="col-1-4 inList" >
+  <my-game *ngFor="let game of games"
+   (click)="gotoDetail(game)"
+   [withoutimage]=true
+   [name]=game.name
+   [image]=game.image
+   [price]=game.price >
+ </my-game> -->
+
+ <div  class="inList" *showItBootstrap="['xs']" >
+   <my-game *ngFor="let game of games"
+     (click)="gotoDetail(game)"
+     [withoutimage]=true
+     [name]=game.name
+     [image]=game.image
+     [price]=game.price  >
+   </my-game>
+ </div>
+
+
+ <div  class="inGrid" *showItBootstrap="['lg','md','xl','sm']">
+   <my-game *ngFor="let game of games"
+     (click)="gotoDetail(game)"
+     [withoutimage]=false
+     [name]=game.name
+     [image]=game.image
+     [price]=game.price  >
+   </my-game>
+ </div>

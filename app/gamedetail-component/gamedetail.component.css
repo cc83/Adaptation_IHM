@@ -1,0 +1,131 @@
+
+#main #description {
+  float :right;
+}
+
+#main {
+  /*
+  display: flex;
+  flex-direction: row;;
+  align-items: baseline;
+  justify-content: space-around;*/
+}
+
+#main #game_description {
+  max-width:60%;
+  min-width: 40%;
+}
+
+#main my-game, #main #game_description {
+  float:left;
+  flex-grow:1;
+  margin-bottom: 60px;
+}
+
+#main my-game {
+  margin-left: 3%;
+  margin-right: 7%;
+  margin-top:5%;
+
+}
+
+#main #game_title {
+  font-size: 2.5em;
+  margin-bottom: 2%;
+}
+
+#main #text_description {
+  text-align: justify;
+  max-height: 60%;
+  overflow-y: scroll;
+  word-wrap: break-word;
+  white-space: pre-line;
+  width: 100%;
+}
+
+#main #buy {
+  margin-top: 5%;
+  text-align: center;
+  width: 100%;
+
+}
+
+#main #buy span {
+
+}
+
+#main #buy button {
+    font-size: 2em;
+}
+
+#main #bought {
+  font-size:1.2em;
+  font-weight: bold;
+}
+
+
+/*for small devices */
+
+
+@media screen and (max-width: 575px) {
+  #main_small #top {
+
+    display: flex;
+    
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #main_small my-game, #main_small #game_infos_small {
+  margin-bottom: 2%;
+  }
+
+  #main_small #text_description {
+    margin-top: 5%;
+  }
+
+}
+
+@media screen and (min-width: 576px) {
+  #main_small #top {
+    height:60%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+
+  #main_small #buy {
+    margin-top: 50%;
+    margin-left:10%;
+
+  }
+
+}
+#main_small #game_title {
+  font-size: 2em;
+  margin-bottom: 2%;
+  width:100%;
+
+}
+
+
+
+#main_small #buy button {
+    font-size: 1.5em;
+}
+
+#main_small #bought {
+  font-weight: bold;
+}
+
+#main_small #text_description {
+  text-align: justify;
+
+  overflow-y: scroll;
+  word-wrap: break-word;
+  white-space: pre-line;
+  width: 90%;
+  margin-left:5%;
+}

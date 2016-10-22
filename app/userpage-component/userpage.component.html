@@ -1,0 +1,9 @@
+
+<div *ngIf="this.ss.session">
+<h2>Hello user !</h2>
+
+<h2>Your games </h2>
+<my-dashboard *ngIf="games" [customGames]=true [games]=this.games></my-dashboard>
+</div>
+
+<h2 *ngIf="!this.ss.session">You must be connected to access this page</h2>
