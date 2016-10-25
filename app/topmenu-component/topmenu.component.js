@@ -43,7 +43,7 @@ TopmenuComponent = __decorate([
     core_1.Component({
         moduleId: module.id,
         selector: 'my-topmenu',
-        template: "\n  <ul>\n  <li><a (click)=\"gotoHomepage()\" >Games</a></li>\n  \n  <li *ngIf=\"ss.session\" id=\"mypage\"><a (click)=\"gotoUserpage()\" >My page</a></li>\n  <li *ngIf=\"!ss.session\" style=\"float:right\" (click)=\"displayLoginComponent()\" ><a class=\"active\" >Login</a></li>\n  <li *ngIf=\"ss.session\" style=\"float:right\" (click)=\"logout()\" ><a class=\"active\" >Logout</a></li>\n</ul>\n  <my-login id=\"login\" (userId)=\"onLoginEvent($event);\" ></my-login>\n\n\n  ",
+        template: "\n  <ul>\n  <li><a (click)=\"gotoHomepage()\" >Games</a></li>\n\n  <li *ngIf=\"ss.session\" id=\"mypage\"><a (click)=\"gotoUserpage()\" >My page</a></li>\n  <li *ngIf=\"!ss.session\" style=\"float:right\" (click)=\"displayLoginComponent()\" ><a class=\"active\" >Login</a></li>\n  <li *ngIf=\"ss.session\" style=\"float:right\" (click)=\"logout()\" ><a class=\"active\" >Logout</a></li>\n</ul>\n  <my-login id=\"login\" (userId)=\"onLoginEvent($event);\" ></my-login>\n\n\n  ",
         styleUrls: ['topmenu.component.css']
     }),
     __metadata("design:paramtypes", [session_service_1.SessionService, router_1.Router])

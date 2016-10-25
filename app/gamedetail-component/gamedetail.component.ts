@@ -1,9 +1,10 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Game }          from './game/game';
+import { Game }          from '../game/game';
 import { GameService } from '../game-service/game.service';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Location }               from '@angular/common';
 import {SessionService}           from '../session-service/session.service';
+import {BuyComponent}             from '../buy-component/buy.component';
 
 @Component({
   moduleId: module.id,
@@ -19,8 +20,10 @@ import {SessionService}           from '../session-service/session.service';
 export class GameDetailComponent implements OnInit {
 
   game: Game;
-  ss: SessionService;
+  private ss: SessionService;
   id: number;
+  buy: boolean;
+  buy = false;
 
   constructor(
     private route: ActivatedRoute,
@@ -53,6 +56,9 @@ export class GameDetailComponent implements OnInit {
     return false;
   }
 
+  buy_game(): void {
+    this.buy = true;
+  }
 
   goBack(): void {
     this.location.back();

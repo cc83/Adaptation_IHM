@@ -8,7 +8,7 @@ import { Component, Output, EventEmitter } from '@angular/core';
   `<div *ngIf="!is_logged">
     <input [(ngModel)]="login" placeholder="login">
     <input [(ngModel)]="password" placeholder="password">
-    <button (click)="check_login()" >Login</button>
+    <button (click)="check_login()" >Send</button>
 
     </div>
   `,

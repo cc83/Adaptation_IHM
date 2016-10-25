@@ -17,6 +17,7 @@ import { GameDetailComponent }          from './gamedetail-component/gamedetail.
 import {LoginComponent }          from './login-component/login.component';
 import {SessionService}           from './session-service/session.service';
 import {UserpageComponent}       from './userpage-component/userpage.component'
+import {BuyComponent}             from './buy-component/buy.component';
 
 let config: ResponsiveConfigInterface = {
     breakPoints: {
@@ -64,7 +65,8 @@ let config: ResponsiveConfigInterface = {
   TopmenuComponent,
   GameDetailComponent,
   LoginComponent,
-  UserpageComponent
+  UserpageComponent,
+  BuyComponent,
   ],
   providers: [
     GameService,

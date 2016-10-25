@@ -9,30 +9,33 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var LoginComponent = (function () {
-    function LoginComponent() {
-        this.userIdChange = new core_1.EventEmitter();
-        this.is_logged = false;
+var BuyComponent = (function () {
+    function BuyComponent() {
+        this.validation = new core_1.EventEmitter();
     }
-    LoginComponent.prototype.check_login = function () {
-        this.userIdChange.emit({
-            value: "1"
+    BuyComponent.prototype.payment_accepted = function () {
+        this.validation.emit({
+            value: true
         });
     };
-    return LoginComponent;
+    return BuyComponent;
 }());
 __decorate([
-    core_1.Output('userId'),
+    core_1.Input(),
     __metadata("design:type", Object)
-], LoginComponent.prototype, "userIdChange", void 0);
-LoginComponent = __decorate([
+], BuyComponent.prototype, "price", void 0);
+__decorate([
+    core_1.Output("validation"),
+    __metadata("design:type", core_1.EventEmitter)
+], BuyComponent.prototype, "validation", void 0);
+BuyComponent = __decorate([
     core_1.Component({
         moduleId: module.id,
-        selector: 'my-login',
-        template: "<div *ngIf=\"!is_logged\">\n    <input [(ngModel)]=\"login\" placeholder=\"login\">\n    <input [(ngModel)]=\"password\" placeholder=\"password\">\n    <button (click)=\"check_login()\" >Send</button>\n\n    </div>\n  ",
-        styleUrls: []
+        selector: 'my-buy',
+        template: "\n    <div *ngIf=\"price\" id=\"main\">\n\n    <div>Transaction amount :{{price}} \u20AC </div>\n    <button (click)=\"payment_accepted()\" >Pay</button>\n\n    </div>\n  ",
+        styleUrls: ['buy.component.css']
     }),
     __metadata("design:paramtypes", [])
-], LoginComponent);
-exports.LoginComponent = LoginComponent;
-//# sourceMappingURL=login.component.js.map
+], BuyComponent);
+exports.BuyComponent = BuyComponent;
+//# sourceMappingURL=buy.component.js.map

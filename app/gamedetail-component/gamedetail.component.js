@@ -17,6 +17,7 @@ var GameDetailComponent = (function () {
         this.route = route;
         this.gameService = gameService;
         this.ss = ss;
+        this.buy = false;
         this.ss = ss;
     }
     GameDetailComponent.prototype.ngOnInit = function () {
@@ -34,6 +35,9 @@ var GameDetailComponent = (function () {
             }
         }
         return false;
+    };
+    GameDetailComponent.prototype.buy_game = function () {
+        this.buy = true;
     };
     GameDetailComponent.prototype.goBack = function () {
         this.location.back();

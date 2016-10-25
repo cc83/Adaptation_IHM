@@ -24,6 +24,7 @@ var gamedetail_component_1 = require("./gamedetail-component/gamedetail.componen
 var login_component_1 = require("./login-component/login.component");
 var session_service_1 = require("./session-service/session.service");
 var userpage_component_1 = require("./userpage-component/userpage.component");
+var buy_component_1 = require("./buy-component/buy.component");
 var config = {
     breakPoints: {
         xs: { max: 600 },
@@ -72,7 +73,8 @@ AppModule = __decorate([
             topmenu_component_1.TopmenuComponent,
             gamedetail_component_1.GameDetailComponent,
             login_component_1.LoginComponent,
-            userpage_component_1.UserpageComponent
+            userpage_component_1.UserpageComponent,
+            buy_component_1.BuyComponent,
         ],
         providers: [
             game_service_1.GameService,

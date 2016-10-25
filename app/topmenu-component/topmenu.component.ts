@@ -9,7 +9,7 @@ import {SessionService}           from '../session-service/session.service';
   `
   <ul>
   <li><a (click)="gotoHomepage()" >Games</a></li>
-  
+
   <li *ngIf="ss.session" id="mypage"><a (click)="gotoUserpage()" >My page</a></li>
   <li *ngIf="!ss.session" style="float:right" (click)="displayLoginComponent()" ><a class="active" >Login</a></li>
   <li *ngIf="ss.session" style="float:right" (click)="logout()" ><a class="active" >Logout</a></li>
